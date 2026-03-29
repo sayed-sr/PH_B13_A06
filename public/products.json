@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Pro",
+    "description": "Generate high-quality content in seconds using advanced AI models.",
+    "price": 29,
+    "period": "Monthly",
+    "tag": "Best Seller",
+    "tagType": "popular",
+    "features": ["Unlimited generations", "Plagiarism check", "SEO optimization"],
+    "icon": "/assets/products/writing.png"
+  },
+  {
+    "id": 2,
+    "name": "Design Templates Pack",
+    "description": "Professional UI/UX kits and social media templates for creators.",
+    "price": 49,
+    "period": "One-time",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["500+ templates", "Sketch/Figma files", "Commercial license"],
+    "icon": "/assets/products/design-tool.png"
+  },
+  {
+    "id": 3,
+    "name": "Premium Stock Assets",
+    "description": "Access millions of high-res photos and 4K video footage.",
+    "price": 15,
+    "period": "Monthly",
+    "tag": "Hot",
+    "tagType": "popular",
+    "features": ["Daily updates", "Unused credits roll over", "No attribution"],
+    "icon": "/assets/products/portfolio.png"
+  },
+  {
+    "id": 4,
+    "name": "Automation Toolkit",
+    "description": "Connect your apps and automate workflows without code.",
+    "price": 79,
+    "period": "Yearly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["100+ integrations", "24/7 support", "Custom webhooks"],
+    "icon": "/assets/products/operation.png"
+  },
+  {
+    "id": 5,
+    "name": "Resume Builder Pro",
+    "description": "Land your dream job with ATS-friendly resume templates.",
+    "price": 19,
+    "period": "One-time",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["Export to PDF", "Smart suggestions", "Multiple layouts"],
+    "icon": "/assets/products/user.png"
+  },
+  {
+    "id": 6,
+    "name": "Social Media Content Kit",
+    "description": "Pre-made captions and schedules for your brand.",
+    "price": 39,
+    "period": "Monthly",
+    "tag": "Best Seller",
+    "tagType": "popular",
+    "features": ["30-day calendar", "Hashtag research", "Analytics tool"],
+    "icon": "/assets/products/social-media.png"
+  },
+  {
+    "id": 7,
+    "name": "Cloud Storage Plus",
+    "description": "Secure and fast storage for your large project files.",
+    "price": 9,
+    "period": "Monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["2TB Storage", "End-to-end encryption", "Team sharing"],
+    "icon": "/assets/products/rocket.png"
+  }
+]
