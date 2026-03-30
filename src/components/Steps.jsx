@@ -1,3 +1,6 @@
+import React from "react";
+import "./Steps.css";
+
 const Steps = () => {
   const stepsData = [
     { id: '01', title: 'Create Account', icon: '/assets/user.png', desc: 'Sign up for free in seconds. No credit card required.' },
@@ -6,21 +9,19 @@ const Steps = () => {
   ];
 
   return (
-    <section className="w-full py-24 px-6 md:px-20 bg-white text-center">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-4">Get Started In 3 Steps</h2>
-        <p className="text-gray-500 mb-16">Start using premium digital tools in minutes, not hours.</p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <section className="steps-section">
+      <div className="steps-container">
+        <h2 className="steps-heading">Get Started In 3 Steps</h2>
+        <p className="steps-subtitle">Start using premium digital tools in minutes, not hours.</p>
+        <div className="steps-grid">
           {stepsData.map((step) => (
-            <div key={step.id} className="relative p-10 rounded-3xl border border-gray-50 hover:bg-gray-50 transition group">
-              <span className="absolute top-6 right-6 bg-purple-600 text-white w-7 h-7 flex items-center justify-center rounded-full text-xs font-bold">
-                {step.id}
-              </span>
-              <div className="bg-purple-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition">
-                <img src={step.icon} className="w-12 h-12" alt={step.title} />
+            <div key={step.id} className="step-card">
+              <span className="step-number">{step.id}</span>
+              <div className="step-icon-container">
+                <img src={step.icon} className="step-icon" alt={step.title} />
               </div>
-              <h4 className="text-2xl font-bold mb-4">{step.title}</h4>
-              <p className="text-gray-500 leading-relaxed">{step.desc}</p>
+              <h4 className="step-title">{step.title}</h4>
+              <p className="step-desc">{step.desc}</p>
             </div>
           ))}
         </div>

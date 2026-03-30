@@ -1,0 +1,131 @@
+/* Banner Section */
+.banner-section {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.banner-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 1.5rem 4rem; /* pt-32 pb-16 px-6 */
+}
+
+@media (min-width: 768px) {
+  .banner-container {
+    flex-direction: row; /* md:flex-row */
+    padding: 8rem 4rem 4rem; /* md:px-16 */
+  }
+}
+
+/* Left Content */
+.banner-left-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* space-y-6 */
+}
+
+@media (min-width: 768px) {
+  .banner-left-content {
+    width: 50%; /* md:w-1/2 */
+  }
+}
+
+/* Badge */
+.banner-badge {
+  background-color: #ede9fe;
+  color: #8b2cf5;
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+/* Title */
+.banner-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #111827;
+  line-height: 1.1;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .banner-title {
+    font-size: 4.5rem;
+  }
+}
+
+.banner-title-highlight {
+  color: #8b2cf5;
+}
+
+/* Description */
+.banner-description {
+  color: #6b7280;
+  font-size: 1.125rem;
+  max-width: 32rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.banner-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.banner-btn-primary {
+  background-color: #8b2cf5;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.banner-btn-primary:hover {
+  background-color: #6d28d9;
+}
+
+.banner-btn-secondary {
+  background-color: transparent;
+  color: #8b2cf5;
+  border: 2px solid #8b2cf5;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.banner-btn-secondary:hover {
+  background-color: #f5f3ff;
+}
+
+/* Right Image */
+.banner-right-content {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .banner-right-content {
+    width: 50%;
+    margin-top: 0;
+    justify-content: flex-end;
+  }
+}
+
+.banner-image {
+  width: 100%;
+  object-fit: contain;
+}

@@ -52,7 +52,7 @@
     "tag": "New",
     "tagType": "new",
     "features": ["Export to PDF", "Smart suggestions", "Multiple layouts"],
-    "icon": "/assets/products/user.png"
+    "icon": "/assets/user.png"
   },
   {
     "id": 6,
@@ -64,16 +64,6 @@
     "tagType": "popular",
     "features": ["30-day calendar", "Hashtag research", "Analytics tool"],
     "icon": "/assets/products/social-media.png"
-  },
-  {
-    "id": 7,
-    "name": "Cloud Storage Plus",
-    "description": "Secure and fast storage for your large project files.",
-    "price": 9,
-    "period": "Monthly",
-    "tag": "New",
-    "tagType": "new",
-    "features": ["2TB Storage", "End-to-end encryption", "Team sharing"],
-    "icon": "/assets/products/rocket.png"
   }
+
 ]

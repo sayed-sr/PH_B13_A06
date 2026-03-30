@@ -1,3 +1,6 @@
+import React from "react";
+import "./Pricing.css";
+
 const Pricing = () => {
   const plans = [
     {
@@ -27,60 +30,43 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="w-full py-24 bg-white">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-16 text-center">
-        <h2 className="text-5xl font-black text-gray-900 mb-4">Simple, Transparent Pricing</h2>
-        <p className="text-gray-500 mb-16">Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+    <section className="pricing-section">
+      <div className="pricing-inner">
+        <h2 className="pricing-title">Simple, Transparent Pricing</h2>
+        <p className="pricing-description">Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
+
+        <div className="pricing-grid">
           {plans.map((plan, index) => (
-            <div 
-              key={index} 
-              className={`relative flex flex-col p-10 rounded-[2.5rem] border transition-all ${
-                plan.isPopular 
-                ? 'bg-[#8B2CF5] text-white border-transparent shadow-2xl scale-105 z-10' 
-                : 'bg-white text-gray-900 border-gray-100 shadow-sm hover:shadow-md'
-              }`}
-            >
+            <div key={index} className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}>
               {plan.isPopular && (
-                <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FFEFD2] text-[#B47818] text-xs font-bold px-4 py-1.5 rounded-full shadow-sm">
-                  Most Popular
-                </span>
+                <span className="popular-badge">Most Popular</span>
               )}
 
-              <div className="text-left mb-8">
-                <h4 className="text-2xl font-bold">{plan.name}</h4>
-                <p className={`text-sm mt-1 ${plan.isPopular ? 'text-purple-100' : 'text-gray-400'}`}>
-                  {plan.description}
-                </p>
+              <div className="plan-header">
+                <h4 className="plan-name">{plan.name}</h4>
+                <p className={`plan-desc ${plan.isPopular ? 'popular-text' : ''}`}>{plan.description}</p>
               </div>
 
-              <div className="text-left mb-8">
-                <span className="text-5xl font-black">${plan.price}</span>
-                <span className={`text-lg ${plan.isPopular ? 'text-purple-200' : 'text-gray-400'}`}>/Month</span>
+              <div className="plan-price">
+                <span className="price">${plan.price}</span>
+                <span className={`price-period ${plan.isPopular ? 'popular-text' : ''}`}>/Month</span>
               </div>
 
-              <ul className="space-y-4 mb-10 flex-grow">
+              <ul className="plan-features">
                 {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-sm font-medium">
+                  <li key={idx} className="plan-feature">
                     <svg 
-                      className={`w-5 h-5 flex-shrink-0 ${plan.isPopular ? 'text-white' : 'text-green-500'}`} 
+                      className={`feature-icon ${plan.isPopular ? 'popular-icon' : ''}`} 
                       fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className={plan.isPopular ? 'text-purple-50' : 'text-gray-600'}>{feature}</span>
+                    <span className={`feature-text ${plan.isPopular ? 'popular-text' : ''}`}>{feature}</span>
                   </li>
                 ))}
               </ul>
 
-              <button 
-                className={`w-full py-4 rounded-2xl font-bold text-lg transition-all ${
-                  plan.isPopular 
-                  ? 'bg-white text-[#8B2CF5] hover:bg-gray-50' 
-                  : 'bg-[#8B2CF5] text-white hover:bg-purple-700'
-                }`}
-              >
+              <button className={`plan-btn ${plan.isPopular ? 'btn-popular' : 'btn-default'}`}>
                 {plan.buttonText}
               </button>
             </div>

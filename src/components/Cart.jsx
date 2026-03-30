@@ -1,32 +1,43 @@
+import React from "react";
+import "./Cart.css";
+
 const Cart = ({ cart, removeFromCart, handleCheckout }) => {
   const totalCost = cart.reduce((total, item) => total + item.price, 0);
 
   return (
-    <div className="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border border-gray-100 text-left">
-      <h3 className="text-3xl font-bold mb-8">Your Cart</h3>
+    <div className="cart-container">
+      <h3 className="cart-title">Your Cart</h3>
+
       {cart.length === 0 ? (
-        <div className="text-center py-20">
-          <p className="text-gray-400 text-lg italic">Your cart is currently empty.</p>
+        <div className="cart-empty">
+          <p className="cart-empty-text">Your cart is currently empty.</p>
         </div>
       ) : (
-        <div className="space-y-6">
+        <div className="cart-items">
           {cart.map((item) => (
-            <div key={item.id} className="flex items-center justify-between p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <div className="flex items-center gap-6">
-                <img src={item.icon} className="w-12 h-12" alt="" />
+            <div key={item.id} className="cart-item">
+              <div className="cart-item-left">
+                <img src={item.icon} className="cart-item-icon" alt={item.name} />
                 <div>
-                  <p className="text-lg font-bold text-gray-800">{item.name}</p>
-                  <p className="text-purple-600 font-semibold">${item.price}</p>
+                  <p className="cart-item-name">{item.name}</p>
+                  <p className="cart-item-price">${item.price}</p>
                 </div>
               </div>
-              <button onClick={() => removeFromCart(item.id)} className="text-pink-500 font-bold hover:underline">Remove</button>
+              <button
+                onClick={() => removeFromCart(item.id)}
+                className="cart-item-remove"
+              >
+                Remove
+              </button>
             </div>
           ))}
-          <div className="flex justify-between items-center border-t border-dashed border-gray-300 pt-8 mt-8">
-            <span className="text-xl text-gray-500 font-medium">Total:</span>
-            <span className="text-4xl font-black text-gray-900">${totalCost}</span>
+
+          <div className="cart-total">
+            <span className="cart-total-label">Total:</span>
+            <span className="cart-total-value">${totalCost}</span>
           </div>
-          <button onClick={handleCheckout} className="w-full mt-8 bg-purple-600 text-white py-5 rounded-2xl text-xl font-black shadow-lg hover:bg-purple-700 transition">
+
+          <button onClick={handleCheckout} className="cart-checkout-btn">
             Proceed To Checkout
           </button>
         </div>
@@ -34,4 +45,5 @@ const Cart = ({ cart, removeFromCart, handleCheckout }) => {
     </div>
   );
 };
+
 export default Cart;

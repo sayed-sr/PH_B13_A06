@@ -13,6 +13,8 @@ import Pricing from './components/Pricing';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 
+import './App.css';
+
 const App = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
@@ -46,39 +48,38 @@ const App = () => {
   };
 
   return (
-  <div className="w-full min-h-screen overflow-x-hidden">
-  <Navbar cartCount={cart.length} setView={setView} />
-  
-  {/* The Banner now has its own padding-top to stay clear of the fixed Nav */}
-  <Banner />
-  <Stats />
+    <div className="app-container">
+      <Navbar cartCount={cart.length} setView={setView} />
+      <Banner />
+      <Stats />
 
-      {/* Main Content Area - Full Width Background */}
-      <section className="w-full py-20 px-6 md:px-20 text-center bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold mb-4">Premium Digital Tools</h2>
-            <p className="text-gray-500 mb-10 max-w-2xl mx-auto">
+      <section className="app-main-section">
+        <div className="app-content-wrapper">
+          <h2 className="app-section-title">Premium Digital Tools</h2>
+          <p className="app-section-desc">
             Choose from our curated collection of premium digital products.
-            </p>
-            
-            <div className="inline-flex bg-white rounded-full p-1 border shadow-sm mb-16">
-            <button 
-                onClick={() => setView('product')} 
-                className={`px-10 py-3 rounded-full font-bold transition ${view === 'product' ? 'bg-purple-600 text-white shadow-md' : 'text-gray-500 hover:text-purple-600'}`}>
-                Products
-            </button>
-            <button 
-                onClick={() => setView('cart')} 
-                className={`px-10 py-3 rounded-full font-bold transition ${view === 'cart' ? 'bg-purple-600 text-white shadow-md' : 'text-gray-500 hover:text-purple-600'}`}>
-                Cart ({cart.length})
-            </button>
-            </div>
+          </p>
 
-            {view === 'product' ? (
+          <div className="app-toggle-buttons">
+            <button 
+              onClick={() => setView('product')}
+              className={`app-toggle-btn ${view === 'product' ? 'app-toggle-active' : ''}`}
+            >
+              Products
+            </button>
+            <button 
+              onClick={() => setView('cart')}
+              className={`app-toggle-btn ${view === 'cart' ? 'app-toggle-active' : ''}`}
+            >
+              Cart ({cart.length})
+            </button>
+          </div>
+
+          {view === 'product' ? (
             <ProductList products={products} addToCart={addToCart} />
-            ) : (
+          ) : (
             <Cart cart={cart} removeFromCart={removeFromCart} handleCheckout={handleCheckout} />
-            )}
+          )}
         </div>
       </section>
 
@@ -86,6 +87,7 @@ const App = () => {
       <Pricing />
       <CTASection />
       <Footer />
+      <ToastContainer />
     </div>
   );
 };

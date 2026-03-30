@@ -1,0 +1,107 @@
+.steps-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 6rem 1.5rem; /* py-24 px-6 */
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .steps-section {
+    padding-left: 5rem;  /* md:px-20 */
+    padding-right: 5rem;
+  }
+}
+
+.steps-container {
+  max-width: 80rem; /* max-w-7xl */
+  margin: 0 auto;
+}
+
+.steps-heading {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.steps-subtitle {
+  color: #6b7280; /* text-gray-500 */
+  margin-bottom: 4rem; /* mb-16 */
+}
+
+/* Grid */
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem; /* gap-12 */
+}
+
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.step-card {
+  position: relative;
+  padding: 2.5rem; /* p-10 */
+  border-radius: 2rem; /* rounded-3xl */
+  border: 1px solid #f9fafb; /* border-gray-50 */
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  background-color: #f9fafb; /* hover:bg-gray-50 */
+}
+
+/* Step number */
+.step-number {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: #8b2cf5; /* bg-purple-600 */
+  color: #ffffff;
+  width: 1.75rem; /* w-7 */
+  height: 1.75rem; /* h-7 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-size: 0.75rem; /* text-xs */
+  font-weight: 700; /* font-bold */
+}
+
+/* Icon container */
+.step-icon-container {
+  background-color: #ede9fe; /* bg-purple-100 */
+  width: 6rem; /* w-24 */
+  height: 6rem; /* h-24 */
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem; /* mx-auto mb-8 */
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover .step-icon-container {
+  transform: scale(1.1); /* group-hover:scale-110 */
+}
+
+.step-icon {
+  width: 3rem; /* w-12 */
+  height: 3rem; /* h-12 */
+}
+
+/* Title & description */
+.step-title {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.step-desc {
+  color: #6b7280; /* text-gray-500 */
+  line-height: 1.5;
+  margin: 0;
+}
