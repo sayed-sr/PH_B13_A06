@@ -12,17 +12,25 @@ const Cart = ({ cart, removeFromCart, handleCheckout }) => {
         <div className="cart-empty">
           <p className="cart-empty-text">Your cart is currently empty.</p>
         </div>
+
+
       ) : (
         <div className="cart-items">
           {cart.map((item) => (
             <div key={item.id} className="cart-item">
               <div className="cart-item-left">
+
+
+
                 <img src={item.icon} className="cart-item-icon" alt={item.name} />
                 <div>
                   <p className="cart-item-name">{item.name}</p>
                   <p className="cart-item-price">${item.price}</p>
                 </div>
               </div>
+
+
+
               <button
                 onClick={() => removeFromCart(item.id)}
                 className="cart-item-remove"
@@ -30,6 +38,9 @@ const Cart = ({ cart, removeFromCart, handleCheckout }) => {
                 Remove
               </button>
             </div>
+
+
+
           ))}
 
           <div className="cart-total">
@@ -37,11 +48,18 @@ const Cart = ({ cart, removeFromCart, handleCheckout }) => {
             <span className="cart-total-value">${totalCost}</span>
           </div>
 
+
+
+
           <button onClick={handleCheckout} className="cart-checkout-btn">
             Proceed To Checkout
           </button>
         </div>
       )}
+
+
+
+      
     </div>
   );
 };
