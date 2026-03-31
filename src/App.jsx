@@ -18,11 +18,13 @@ import './App.css';
 const App = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  
   const [view, setView] = useState('product');
 
   useEffect(() => {
     fetch('./products.json')
       .then((res) => res.json())
+      
       .then((data) => setProducts(data))
       .catch((err) => console.error("Error loading products:", err));
   }, []);
@@ -31,6 +33,7 @@ const App = () => {
     const isExist = cart.find((item) => item.id === product.id);
     if (!isExist) {
       setCart([...cart, product]);
+      
       toast.success(`${product.name} added to cart!`);
     } else {
       toast.warn("This item is already in your cart!");
@@ -39,6 +42,7 @@ const App = () => {
 
   const removeFromCart = (id) => {
     setCart(cart.filter((item) => item.id !== id));
+    
     toast.error("Item removed from cart");
   };
 
@@ -55,17 +59,20 @@ const App = () => {
 
       <section className="app-main-section">
         <div className="app-content-wrapper">
+          
           <h2 className="app-section-title">Premium Digital Tools</h2>
           <p className="app-section-desc">
             Choose from our curated collection of premium digital products.
           </p>
 
           <div className="app-toggle-buttons">
+            
             <button 
               onClick={() => setView('product')}
               className={`app-toggle-btn ${view === 'product' ? 'app-toggle-active' : ''}`}
             >
               Products
+              
             </button>
             <button 
               onClick={() => setView('cart')}
@@ -73,6 +80,7 @@ const App = () => {
             >
               Cart ({cart.length})
             </button>
+            
           </div>
 
           {view === 'product' ? (
@@ -81,13 +89,18 @@ const App = () => {
             <Cart cart={cart} removeFromCart={removeFromCart} handleCheckout={handleCheckout} />
           )}
         </div>
+        
       </section>
 
       <Steps />
+      
       <Pricing />
+      
       <CTASection />
       <Footer />
+      
       <ToastContainer />
+      
     </div>
   );
 };

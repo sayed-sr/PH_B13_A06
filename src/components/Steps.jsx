@@ -11,21 +11,28 @@ const Steps = () => {
   return (
     <section className="steps-section">
       <div className="steps-container">
+
         <h2 className="steps-heading">Get Started In 3 Steps</h2>
         <p className="steps-subtitle">Start using premium digital tools in minutes, not hours.</p>
+
         <div className="steps-grid">
           {stepsData.map((step) => (
             <div key={step.id} className="step-card">
+
               <span className="step-number">{step.id}</span>
               <div className="step-icon-container">
+
                 <img src={step.icon} className="step-icon" alt={step.title} />
               </div>
               <h4 className="step-title">{step.title}</h4>
+
               <p className="step-desc">{step.desc}</p>
             </div>
           ))}
         </div>
+        
       </div>
+      
     </section>
   );
 };

@@ -1,51 +1,58 @@
-/* Root App Container */
+
 .app-container {
   width: 100%;
   min-height: 100vh;
+  /* border: 1px solid red; */
   overflow-x: hidden;
 }
 
-/* Main Section */
+
 .app-main-section {
   width: 100%;
-  padding: 5rem 1.5rem; /* py-20 px-6 */
-  background-color: #f9fafb; /* bg-gray-50 */
+  padding: 5rem 1.5rem; 
+  /* border: 1px solid red; */
+  background-color: #f9fafb;
   text-align: center;
 }
 
 @media (min-width: 768px) {
   .app-main-section {
-    padding: 5rem 5rem; /* md:px-20 */
+    /* border: 1px solid red; */
+    padding: 5rem 5rem;
   }
 }
 
 .app-content-wrapper {
-  max-width: 1120px; /* max-w-7xl */
+  max-width: 1120px; 
+  /* border: 1px solid red; */
   margin: 0 auto;
 }
 
-/* Section Title */
+
 .app-section-title {
-  font-size: 2.25rem; /* text-4xl */
+  font-size: 2.25rem;
+  /* border: 1px solid red; */ 
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .app-section-desc {
-  color: #6b7280; /* text-gray-500 */
+  color: #6b7280; 
   margin-bottom: 2.5rem;
+  /* border: 1px solid red; */
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Toggle Buttons */
+
 .app-toggle-buttons {
   display: inline-flex;
   background-color: #ffffff;
   border-radius: 9999px;
+  /* border: 1px solid red; */
   padding: 0.25rem;
-  border: 1px solid #e5e7eb; /* optional subtle border */
+  border: 1px solid #e5e7eb; 
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   margin-bottom: 4rem;
 }
@@ -53,6 +60,7 @@
 .app-toggle-btn {
   padding: 0.75rem 2.5rem;
   border-radius: 9999px;
+  /* border: 1px solid red; */
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
@@ -64,10 +72,12 @@
 
 .app-toggle-btn:hover {
   color: #8b2cf5;
+  /* border: 1px solid red; */
 }
 
 .app-toggle-active {
-  background-color: #8b2cf5; /* active bg-purple-600 */
+  background-color: #8b2cf5; 
   color: #ffffff;
+  /* border: 1px solid red; */
   box-shadow: 0 4px 10px rgba(139,44,245,0.4);
 }
