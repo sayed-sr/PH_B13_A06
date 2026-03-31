@@ -4,34 +4,40 @@ import "./Navbar.css";
 const Navbar = ({ cartCount, setView }) => (
   <nav className="navbar">
     <div className="navbar-inner">
-      {/* Logo */}
+   
       <div className="navbar-logo" onClick={() => setView('product')}>
         DigiTools
       </div>
 
-      {/* Nav Links */}
       <div className="navbar-links">
         <a href="#">Products</a>
+
         <a href="#">Features</a>
+
         <a href="#">Pricing</a>
+
         <a href="#">FAQ</a>
       </div>
 
-      {/* Action Buttons */}
+      
       <div className="navbar-actions">
-        {/* Cart Icon */}
+    
         <div className="cart-icon" onClick={() => setView('cart')}>
           <img
+
             src="assets/products/shopping-cart.png"
             alt="Cart"
             className="cart-image"
           />
+
+
           {cartCount > 0 && (
+            
             <span className="cart-badge">{cartCount}</span>
           )}
         </div>
 
-        {/* Login Button */}
+        
         <button className="login-btn">Login</button>
       </div>
     </div>
