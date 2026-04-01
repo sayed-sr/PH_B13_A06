@@ -15,6 +15,8 @@ const Navbar = ({ cartCount, setView }) => (
         <a href="#">Features</a>
 
         <a href="#">Pricing</a>
+        
+        <a href="#">Testimonials</a>
 
         <a href="#">FAQ</a>
       </div>
@@ -37,8 +39,8 @@ const Navbar = ({ cartCount, setView }) => (
           )}
         </div>
 
-        
-        <button className="login-btn">Login</button>
+        <p>Login </p>
+        <button className="login-btn"> Get started </button>
       </div>
     </div>
   </nav>

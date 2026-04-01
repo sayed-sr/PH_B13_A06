@@ -62,7 +62,7 @@ const App = () => {
           
           <h2 className="app-section-title">Premium Digital Tools</h2>
           <p className="app-section-desc">
-            Choose from our curated collection of premium digital products.
+            Choose from our curated collection of premium digital products designed<br/> to boost your productivity and creativity.
           </p>
 
           <div className="app-toggle-buttons">

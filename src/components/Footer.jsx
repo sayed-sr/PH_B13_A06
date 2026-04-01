@@ -16,7 +16,6 @@ const Footer = () => (
           </p>
         </div>
 
-        
         <div className="footer-column">
 
 
@@ -45,24 +44,39 @@ const Footer = () => (
           </ul>
         </div>
 
+  <div className="footer-column">
 
+
+          <h4 className="footer-column-title"> Resources </h4>
+          <ul className="footer-links">
+            <li><a href="#"> Documentation </a></li>
+
+
+            <li><a href="#"> Help Center </a></li>
+            <li><a href="#"> Community </a></li>
+            <li><a href="#"> Contact </a></li>
+          </ul>
+        </div>
        
         <div className="footer-social">
-          <h4 className="footer-column-title">Social Links</h4>
-          <div className="footer-social-icons">
-            {['instagram', 'facebook', 'twitter'].map((social) => (
-              <a key={social} href="#" className="social-icon">
-                <img 
+  <h4 className="footer-column-title">Social Links</h4>
 
-                  src={`/src/assets/${social === 'twitter' ? 'X' : social}.png`} 
-                  alt={social} 
-                  className="social-icon-img" 
+  <div className="footer-social-icons">
+    <a href="#" className="social-icon">
+      <img src="/assets/facebook.png" alt="facebook" className="social-icon-img" />
+    </a>
 
-                />
-              </a>
-            ))}
-          </div>
-        </div>
+
+    <a href="#" className="social-icon">
+      <img src="/assets/instagram.png" alt="instagram" className="social-icon-img" />
+    </a>
+
+
+    <a href="#" className="social-icon">
+      <img src="/assets/twitter.png" alt="twitter" className="social-icon-img" />
+    </a>
+  </div>
+</div>
       </div>
 
     

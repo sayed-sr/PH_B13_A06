@@ -16,7 +16,7 @@ const CTASection = () => {
 
 
 
-          Join thousands of professionals already using DigiTools to supercharge their productivity.
+          Join thousands of professionals who are already using Digitools to work smarter.<br/>Start your free trial today.
         </p>
         <div className="cta-buttons">
 
@@ -25,6 +25,8 @@ const CTASection = () => {
           <button className="btn-primary">Explore Products</button>
           <button className="btn-secondary">View Pricing</button>
         </div>
+
+        <p>14-day free trial • No credit card required • Cancel anytime</p>
       </div>
 
 

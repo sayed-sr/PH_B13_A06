@@ -39,6 +39,7 @@
   grid-template-columns: 1fr;
   /* border: 1px solid red; */
   gap: 3rem; 
+
 }
 
 @media (min-width: 768px) {
@@ -51,10 +52,10 @@
 
 .step-card {
   position: relative;
-  /* border: 1px solid red; */
+  border: 1px solid rgba(8, 0, 0, 0.127);
   padding: 2.5rem; 
   border-radius: 2rem; 
-  border: 1px solid #f9fafb; 
+  /* border: 1px solid #f9fafb;  */
   transition: all 0.3s ease;
 }
 

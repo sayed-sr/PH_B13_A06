@@ -23,6 +23,24 @@
   padding: 1rem 1.5rem;
 }
 
+
+.navbar-logo {
+  /* width: 180px;
+  height: 40px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #7c3aed;
+  cursor: pointer;
+
+  flex-shrink: 0;
+  line-height: 1;
+}
+
 @media (min-width: 768px) {
   .navbar-inner {
     padding-left: 4rem;
@@ -32,17 +50,6 @@
 }
 
 
-.navbar-logo {
-  /* border: 1px solid red; */
-  font-size: 1.5rem; 
-  font-weight: 900; 
-  color: #7c3aed; 
-
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
 
 
 .navbar-links {
@@ -132,7 +139,7 @@
 
 .login-btn {
   /* border: 1px solid red; */
-  background-color: #111827; 
+  background-color: blue; 
   color: #ffffff;
 
   padding: 0.625rem 1.75rem; 

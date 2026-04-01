@@ -6,19 +6,22 @@ const Banner = () => (
     <div className="banner-container">
     
       <div className="banner-left-content">
-        <span className="banner-badge">#1 AI Content Toolkit 2026</span>
+        <span className="banner-badge"><img src="assets/dot.png" alt="" /> New: AI-Powered Tools Available</span>
         <h1 className="banner-title">
 
           Supercharge Your <br />
           <span className="banner-title-highlight">Digital Workflow</span>
         </h1>
                        <p className="banner-description">
-          Create premium content, design stunning visuals, and automate your productivity with our suite of professional digital tools.
+       Access premium AI tools, design assets, templates, and productivity
+software—all in one place. Start creating faster today.
+
+Explore Products
         </p>
         <div className="banner-buttons">
 
           <button className="banner-btn-primary">Explore Products</button>
-          <button className="banner-btn-secondary">All Applications</button>
+          <button className="banner-btn-secondary"><img src="assets/Play.png" alt="" />Watch Demo</button>
         </div>
       </div>
 
